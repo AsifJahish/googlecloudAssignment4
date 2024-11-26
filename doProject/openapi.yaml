@@ -1,0 +1,85 @@
+swagger: '2.0'
+info:
+  title: Todo List API
+  description: API for managing todo items
+  version: 1.0.0
+host: midproject-438621.appspot.com
+schemes:
+  - https
+paths:
+  /api/tasks/:
+    get:
+      summary: List all tasks
+      operationId: listTasks
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                title:
+                  type: string
+                description:
+                  type: string
+    post:
+      summary: Create a new task
+      operationId: createTask
+      parameters:
+        - name: task
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+      responses:
+        201:
+          description: Task created
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              item_id:
+                type: integer
+  /api/tasks/edit/{item_id}/:
+    put:
+      summary: Edit an existing task
+      operationId: editTask
+      parameters:
+        - name: item_id
+          in: path
+          required: true
+          type: integer
+        - name: task
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+      responses:
+        200:
+          description: Task updated
+  /api/tasks/delete/{item_id}/:
+    delete:
+      summary: Delete a task
+      operationId: deleteTask
+      parameters:
+        - name: item_id
+          in: path
+          required: true
+          type: integer
+      responses:
+        200:
+          description: Task deleted

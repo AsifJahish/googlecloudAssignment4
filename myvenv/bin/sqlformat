@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/asifjahish/vscode/web development/Cloud Application/GoogleCloudApplication/Assignment_4/myvenv/bin/python3" "$0" "$@"
+'''exec' "/home/asifjahish/vscode/web development/Cloud Application/GoogleCloudApplication/Assignment_4/googlecloudAssignment4/myvenv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

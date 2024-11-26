@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doproject  # Replace with your actual app name
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: doproject  # Match with the app label
+  template:
+    metadata:
+      labels:
+        app: doproject  # Match with the app label
+    spec:
+      containers:
+      - name: doproject  # Replace with your actual app name
+        image: gcr.io/midproject-438621/doproject:latest
+        ports:
+        - containerPort: 8000

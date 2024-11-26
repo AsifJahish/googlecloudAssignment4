@@ -1,0 +1,8 @@
+runtime: python39
+service: default
+
+entrypoint: gunicorn -b :$PORT doProject.wsgi
+
+env_variables:
+  GOOGLE_CLOUD_PROJECT: midproject-438621
+

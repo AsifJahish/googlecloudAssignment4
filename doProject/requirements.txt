@@ -1,0 +1,6 @@
+   Django
+   mysqlclient
+   google-cloud-secret-manager
+   requests
+   Flask
+   gunicorn
