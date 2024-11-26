@@ -80,23 +80,23 @@ WSGI_APPLICATION = 'doProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.mysql',
-#          'HOST': '/cloudsql/assignment-4-final:us-central1:assignment-4-final',
-#          'PORT' : '3306',
-#          'USER': 'root',
-#          'PASSWORD': 'Kabul@2020',
-#          'NAME': 'todo_db',
-#      }
-#    }
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'HOST': '/cloudsql/assignment-4-final:us-central1:assignment-final-4',
+         'PORT' : '3306',
+         'USER': 'root',
+         'PASSWORD': 'Kabul@2020',
+         'NAME': 'todo_db',
+     }
+   }
 
 # DATABASES = {
 #     'default': {

@@ -4,5 +4,4 @@ service: default
 entrypoint: gunicorn -b :$PORT doProject.wsgi
 
 env_variables:
-  GOOGLE_CLOUD_PROJECT: midproject-438621
-
+  GOOGLE_CLOUD_PROJECT: assignment-4-final
